@@ -6,6 +6,7 @@ from glob import glob
 import os
 from PIL import Image
 from starlette.responses import StreamingResponse
+from starlette.requests import Request
 
 path = "Users/meetjethwa/Developer/Projects/Insta_API"
 
@@ -16,6 +17,10 @@ app = FastAPI()
 @app.get("/")
 def root():
   return {"Welcome": "Hello, World"}
+
+@app.get("/path")
+async def my_route(request: Request) -> None:
+    print(request.url.path)
 
 @app.get("/profile/")
 def profile(username: str):
