@@ -19,8 +19,8 @@ def root():
   return {"Welcome": "Hello, World"}
 
 @app.get("/path")
-async def my_route(request: Request) -> None:
-    print(request.url.path)
+def path():
+    return os.getcwd()
 
 @app.get("/profile/")
 def profile(username: str):
