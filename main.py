@@ -8,7 +8,7 @@ from PIL import Image
 from starlette.responses import StreamingResponse
 from starlette.requests import Request
 
-path = "/app"
+path = os.getcwd()
 
 
 app = FastAPI()
