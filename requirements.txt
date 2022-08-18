@@ -3,3 +3,4 @@ uvicorn
 aiofiles
 instaloader
 pillow
+pydantic
