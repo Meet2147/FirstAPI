@@ -1,14 +1,9 @@
 
-FROM python:3.9.12-slim
+FROM python:3.8-slim
 
+WORKDIR /app
+COPY requirements.txt ./
+RUN pip3 install --no-cache-dir -r requirements.txt
 
-WORKDIR /code
-
-COPY ./requirements.txt /code/requirements.txt
-
-
-RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
-
-COPY ./main.py /code/app
-
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "80"]
+COPY . .
+EXPOSE 8000
