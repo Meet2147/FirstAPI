@@ -8,7 +8,7 @@ from PIL import Image
 from starlette.responses import StreamingResponse
 from starlette.requests import Request
 
-path = "Users/meetjethwa/Developer/Projects/Insta_API"
+path = "/app"
 
 
 app = FastAPI()
