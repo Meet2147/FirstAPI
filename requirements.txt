@@ -1,2 +1,5 @@
 fastapi
 uvicorn
+aiofiles
+instaloader
+pillow
