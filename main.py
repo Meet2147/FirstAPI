@@ -28,6 +28,7 @@ def profile(username: str):
     obj.download_profile(username, profile_pic_only=True)
     
     file_path = glob(os.path.join(f"{username}",'*.jpg'))
+    print(file_path)
     for i in file_path:
         return FileResponse(i)
     return {"error":"file not found"}
